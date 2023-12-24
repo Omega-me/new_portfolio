@@ -1,4 +1,6 @@
 'use client';
+import { socialLinks } from '@/common/configs';
+import { eSections } from '@/common/enums';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 interface HeroProps {}
@@ -12,13 +14,13 @@ const Hero: React.FC<HeroProps> = props => {
             <div className="row">
               <div className="col col-md-10 col-sm-12 slide-caption">
                 <div className="slide-subtitle">
-                  <h4>I Am David Miller</h4>
+                  <h4>I Am Olken Merxira</h4>
                 </div>
                 <div className="slide-title">
-                  <h2>Creative Designer</h2>
+                  <h2>Software Developer</h2>
                 </div>
                 <div className="btns">
-                  <AnchorLink href="#contact" className="template-btn go-contact-area">
+                  <AnchorLink href={`#${eSections.CONTACT}`} className="template-btn go-contact-area">
                     Contact Me
                   </AnchorLink>
                 </div>
@@ -30,26 +32,13 @@ const Hero: React.FC<HeroProps> = props => {
       <div className="social-links">
         <div className="overlay"></div>
         <ul>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/">
-              <i className="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
-              <i className="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/">
-              <i className="fa fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.pinterest.com/">
-              <i className="fa fa-pinterest"></i>
-            </a>
-          </li>
+          {socialLinks.map(link => (
+            <li key={link.key}>
+              <a target="_blank" rel="noopener noreferrer" href={link.href}>
+                <i className={link.iconClassName}></i>
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="white_svg">
