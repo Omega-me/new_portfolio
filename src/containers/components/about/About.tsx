@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import { memo } from 'react';
 import { DefaultModal } from '..';
 
 interface AboutProps {}
@@ -52,4 +53,4 @@ const About: React.FC<AboutProps> = props => {
   );
 };
 
-export default About;
+export default memo(About);

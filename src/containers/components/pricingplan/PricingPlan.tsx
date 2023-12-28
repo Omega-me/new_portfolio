@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { memo } from 'react';
 
 interface PricingPlanProps {}
 
@@ -97,4 +98,4 @@ const PricingPlan: React.FC<PricingPlanProps> = props => {
   );
 };
 
-export default PricingPlan;
+export default memo(PricingPlan);

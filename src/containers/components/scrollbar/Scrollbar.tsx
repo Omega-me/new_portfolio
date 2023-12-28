@@ -1,5 +1,6 @@
 'use client';
 import { eSections } from '@/common/enums';
+import { memo } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 interface ScrollbarProps {}
@@ -20,4 +21,4 @@ const Scrollbar: React.FC<ScrollbarProps> = props => {
   );
 };
 
-export default Scrollbar;
+export default memo(Scrollbar);

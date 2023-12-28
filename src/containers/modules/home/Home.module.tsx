@@ -3,12 +3,10 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { Home } from '@/containers/components';
 
 export interface HomeModuleInjectedProps {
-  className: string;
+  className?: string;
 }
 
-const HomeModuleContext = createContext<HomeModuleInjectedProps>({
-  className: 'fixed-navbar active',
-});
+const HomeModuleContext = createContext<HomeModuleInjectedProps>({});
 
 export const useHomeModuleContext = () => {
   const ctx = useContext<HomeModuleInjectedProps>(HomeModuleContext);

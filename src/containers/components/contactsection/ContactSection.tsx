@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import { ContactForm } from '..';
 
 interface ContactSectionProps {}
@@ -74,4 +75,4 @@ const ContactSection: React.FC<ContactSectionProps> = props => {
   );
 };
 
-export default ContactSection;
+export default memo(ContactSection);

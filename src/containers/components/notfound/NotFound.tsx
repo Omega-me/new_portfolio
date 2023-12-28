@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import erimg from '/public/images/error-404.png';
 import Image from 'next/image';
@@ -37,4 +37,4 @@ const NotFound: React.FC<NotFoundProps> = props => {
     </section>
   );
 };
-export default NotFound;
+export default memo(NotFound);

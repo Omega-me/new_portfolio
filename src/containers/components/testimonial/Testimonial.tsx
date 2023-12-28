@@ -3,6 +3,7 @@
 import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { memo } from 'react';
 
 interface TestimonialProps {}
 
@@ -120,4 +121,4 @@ const Testimonial: React.FC<TestimonialProps> = props => {
   );
 };
 
-export default Testimonial;
+export default memo(Testimonial);

@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import { memo } from 'react';
+
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = props => {
@@ -59,4 +61,4 @@ const Footer: React.FC<FooterProps> = props => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

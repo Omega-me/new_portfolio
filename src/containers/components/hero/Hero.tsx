@@ -1,6 +1,7 @@
 'use client';
 import { socialLinks } from '@/common/configs';
 import { eSections } from '@/common/enums';
+import { memo } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 interface HeroProps {}
@@ -50,4 +51,4 @@ const Hero: React.FC<HeroProps> = props => {
   );
 };
 
-export default Hero;
+export default memo(Hero);
